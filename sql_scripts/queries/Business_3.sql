@@ -1,0 +1,3 @@
+SELECT city, SUM(CAST(stars AS DECIMAL))/COUNT(*) AS AvgStars FROM yelp.business
+GROUP BY city
+ORDER BY SUM(CAST(stars AS DECIMAL))/COUNT(*) DESC

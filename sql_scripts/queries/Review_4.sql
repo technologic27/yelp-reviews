@@ -1,0 +1,3 @@
+SELECT DISTINCT(SUBSTRING(TRIM(date),1,10)) AS 'Date', COUNT(*) AS 'Count' FROM yelp.review
+GROUP BY SUBSTRING(TRIM(date),1,10)
+ORDER BY count(*) DESC
