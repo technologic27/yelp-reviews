@@ -21,12 +21,12 @@ Activate virtual environment.
 ```sh
 $ source yelp-reviews/bin/activate
 ```
-Install requirements in Linux-based environment.
+Install requirements.
 
 ```sh
 sudo pip install -r requirements.txt
 ```
-Change global variable `BUCKET` in `Makefile` the file directory that contains the raw yelp dataset in json format
+Change global variable `BUCKET` in `Makefile` to the file directory that contains the raw yelp dataset in json format
 
 Create clean dataset for metrics generation and modelling. Do this only once!
 
@@ -50,7 +50,7 @@ $ make train
 If virtual environment `yelp-reviews` has been created before, activate virtual environment using the following command. Skip installation of requirements.
 
 ```sh
-$ source driver-allocation/bin/activate
+$ source yelp-reviews/bin/activate
 ```
 The model evaluation, business metric calculation and visualisation is in `notebooks/` directory. To activate jupyter notebook, type the following command
 
@@ -69,23 +69,22 @@ I have used the business and review dataset to predict the closure of a restaura
 4. F1 Score:  ~ 80%
 
 
-Deep-dive Analysis of Model, Feature Importance
+Deep-dive Analysis of model and feature importance
 ---
 Results of the model are in the notebooks directory.
-1. `notebooks/model_evaluation.ipynb`
+`notebooks/model_evaluation.ipynb`
 
 Visualisation of Business Metrics for decision making
 ---
-1. `notebooks/visualisations.ipynb`
+`notebooks/visualisations.ipynb`
 
-Script to push data MySQL database
+MySQL database connector
 ---
-Clients to MySQL database
-1. `clients/`
+`clients/`
 
 SQL queries to create schema, push data into the DB and generate metrics
 ---
-1. `sql_scripts/`
+`sql_scripts/`
 
 
 Data Details
